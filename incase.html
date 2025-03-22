@@ -1,0 +1,297 @@
+<div class="col-md-6 bg-dark d-flex align-items-center">
+    <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+        <h5 class="section-title ff-secondary text-start text-primary fw-normal">Orders & Delivery</h5>
+        <h4 class="text-white mb-4">Order your favorite meals and get them delivered to your doorstep!</h4>
+        
+        <div class="order-form bg-light p-4 rounded shadow-sm">
+            <h2 class="text-center mb-4">Place Your Order</h2>
+            <form action="#" method="POST" class="row g-3">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                        <label for="phone">Phone Number</label>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="address" name="address" placeholder="Delivery Address" required>
+                        <label for="address">Delivery Address</label>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="form-floating">
+                        <textarea class="form-control" id="order" name="order" placeholder="Your Order" rows="4" required></textarea>
+                        <label for="order">Your Order</label>
+                    </div>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Place Order</button>
+                </div>
+            </form>
+        </div>
+</div>
+
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content rounded-0">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Video</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <!-- 16:9 aspect ratio -->
+        <div class="ratio ratio-16x9">
+            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                allow="autoplay"></iframe>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="orders-delivery container py-5">
+    <h1 class="text-center">Orders & Delivery</h1>
+    <p class="text-center">Order your favorite meals and get them delivered to your doorstep!</p>
+    
+    <div class="order-form bg-light p-4 rounded shadow-sm">
+        <h2 class="text-center mb-4">Place Your Order</h2>
+        <form action="#" method="POST" class="row g-3">
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                    <label for="name">Your Name</label>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                    <label for="phone">Phone Number</label>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Delivery Address" required>
+                    <label for="address">Delivery Address</label>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <div class="form-floating">
+                    <textarea class="form-control" id="order" name="order" placeholder="Your Order" rows="4" required></textarea>
+                    <label for="order">Your Order</label>
+                </div>
+            </div>
+            
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Place Order</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="delivery-info bg-light p-4 mt-4 rounded shadow-sm text-center">
+        <h2>Delivery Information</h2>
+        <p>We deliver within 30-45 minutes in your area.</p>
+        <p>Delivery charges may apply based on distance.</p>
+        <p>For inquiries, contact us at <a href="tel:+234 8060845604">+234 8060845604</a>.</p>
+    </div>
+</section>
+
+
+
+<div id="order-page" class="order-page">
+    <h1>Place Your Order</h1>
+    <form id="order-form" class="order-form">
+        <label for="customer-name">Name:</label>
+        <input type="text" id="customer-name" name="customer-name" required>
+        
+        <label for="food-item">Food Item:</label>
+        <input type="text" id="food-item" name="food-item" required>
+        
+        <button type="submit" class="order-btn">Place Order</button>
+    </form>
+    
+    <div id="order-confirmation" class="order-confirmation hidden">
+        <h3>Order Confirmation</h3>
+        <p>Your order number is: <span id="order-number"></span></p>
+    </div>
+</div>
+
+
+
+
+
+
+/* Order Page Styles */
+.order- {
+    text-align: center;
+    padding: 30px;
+    background-color: #F80;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.order-page h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.order-btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background-color: #45a049;
+}
+
+.order-confirmation {
+    margin-top: 20px;
+}
+
+.order-confirmation.hidden {
+    display: none;
+}
+
+/* Order Confirmation Hidden Class */
+.hidden {
+    display: none;
+}
+
+.order-confirmation {
+    margin-top: 20px;
+    background-color: #e9f7e9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+
+<div class="order-form bg-light p-4 rounded shadow-sm">
+    <h2 class="text-center mb-4">Place Your Order</h2>
+    <form id="order-form" class="row g-3">
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                <label for="name">Your Name</label>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                <label for="phone">Phone Number</label>
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="address" name="address" placeholder="Delivery Address" required>
+                <label for="address">Delivery Address</label>
+            </div>
+        </div> 
+        
+        <div class="col-12">
+            <div class="form-floating">
+                <textarea class="form-control" id="order" name="order" placeholder="Your Order" rows="4" required></textarea>
+                <label for="order">Your Order</label>
+            </div>
+        </div>
+        
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Place Order</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("tracking-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const orderNumber = document.getElementById("order-number").value;
+    const statusMessage = document.getElementById("status-message");
+    const trackingStatus = document.getElementById("tracking-status");
+
+    // Simulate different order status based on the order number
+    switch (orderNumber) {
+        case "001":
+            statusMessage.textContent = "Your order is received and is being prepared!";
+            trackingStatus.classList.remove("hidden", "pending", "in-progress", "completed");
+            trackingStatus.classList.add("pending");
+            break;
+        case "002":
+            statusMessage.textContent = "Your order is on its way to be delivered!";
+            trackingStatus.classList.remove("hidden", "pending", "in-progress", "completed");
+            trackingStatus.classList.add("in-progress");
+            break;
+        case "003":
+            statusMessage.textContent = "Your order has been delivered! Enjoy your meal!";
+            trackingStatus.classList.remove("hidden", "pending", "in-progress", "completed");
+            trackingStatus.classList.add("completed");
+            break;
+        default:
+            statusMessage.textContent = "Order number not found. Please check and try again.";
+            trackingStatus.classList.remove("hidden", "pending", "in-progress", "completed");
+            trackingStatus.classList.add("pending");
+            break;
+    }
+
+    // Show the tracking status section
+    trackingStatus.classList.remove("hidden");
+});
