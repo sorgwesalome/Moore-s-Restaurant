@@ -154,3 +154,12 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+
+// Call refreshOrders after an order is placed
+document.querySelector("#orderForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    setTimeout(() => {
+        alert("Order placed successfully!");
+        refreshOrders(); // Refresh order list dynamically
+    }, 1000);
+});
