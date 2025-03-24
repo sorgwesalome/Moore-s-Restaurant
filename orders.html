@@ -128,7 +128,12 @@
                     </div>
                 </form>
             </div>
-            
+            <div class="payment-container bg-light p-4 mt-4 rounded shadow-sm text-center">
+                <h2>Make a Payment</h2>
+                <input type="email" id="customerEmail" placeholder="Enter your email" required>
+                <button onclick="payWithPaystack()">Pay Now</button>
+            </div>
+
             <div class="delivery-info bg-light p-4 mt-4 rounded shadow-sm text-center">
                 <h2>Delivery Information</h2>
                 <p>We deliver within 30-45 minutes in your area.</p>
@@ -183,7 +188,7 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Moore's Restaurant</a>, All Right Reserved. 
+                            &copy; <a class="border-bottom" href="index.html">Moore's Restaurant</a>, All Right Reserved. 
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
@@ -214,6 +219,8 @@
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
 </body>
 
 </html>

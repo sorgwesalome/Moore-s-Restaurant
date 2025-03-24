@@ -155,11 +155,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Call refreshOrders after an order is placed
-document.querySelector("#orderForm").addEventListener("submit", function (event) {
-    event.preventDefault();
-    setTimeout(() => {
-        alert("Order placed successfully!");
-        refreshOrders(); // Refresh order list dynamically
-    }, 1000);
-});
+function payWithPaystack() {
+    let email = document.getElementById("customerEmail").value; 
+
+    if (!email) {
+      alert("Please enter your email");
+      return;
+    }
+
+    let handler = PaystackPop.setup({
+      key: 'pk_test_0eb035e68986ea7c1c059ac7631488611479292b',
+      email: email,
+      amount: 5000 * 100,
+      currency: 'NGN',
+      ref: 'TXN_' + Math.floor(Math.random() * 1000000),
+      callback: function(response) {
+        alert('Payment successful! Transaction ref: ' + response.reference);
+      },
+      onClose: function() {
+        alert('Transaction was not completed.');
+      }
+    });
+
+    handler.openIframe();
+  }

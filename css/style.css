@@ -457,7 +457,37 @@
     }
 }
 
-.hidden {
-    display: none;
+.payment-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 800px;
 }
 
+.payment-container h2 {
+    margin-bottom: 15px;
+    color: #520;
+}
+
+.payment-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.payment-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #F80f;
+    color: #520;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
