@@ -164,20 +164,31 @@ function payWithPaystack() {
     handler.openIframe();
   }
 
-    (function() {
-        emailjs.init("Z_DIy1J6m8mZBavjf");
-    })();
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log("Initializing EmailJS...");
+    emailjs.init("0obf0aGEgD94pOoc2");
+});
 
-    document.getElementById("newsletterForm").addEventListener("submit", function(event) {
-        event.preventDefault();
+document.getElementById("newsletterForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-        emailjs.send("service_e3swlbe", "template_a6begzd", {
-            user_email: document.getElementById("emailInput").value
-        }).then(response => {
-            alert("Thank you! You've successfully subscribed.");
-            document.getElementById("newsletterForm").reset();
-        }).catch(error => {
-            alert("Error: Unable to send email.");
-            console.error("EmailJS Error:", error);
-        });
+    let userEmail = document.getElementById("emailInput").value;
+    console.log("User Email Entered:", userEmail);
+
+    if (!userEmail) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+    console.log("Sending email with EmailJS...");
+    
+    emailjs.send("service_e3swlbe", "template_a6begzd", {
+        user_email: userEmail
+    }).then(response => {
+        console.log("EmailJS Response:", response);
+        alert("Thank you! You've successfully subscribed.");
+        document.getElementById("newsletterForm").reset();
+    }).catch(error => {
+        console.error("EmailJS Error:", error);
+        alert("Error: Unable to send email. Check the console for details.");
     });
+});

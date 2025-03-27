@@ -463,11 +463,10 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 800px;
+    width: 900px;
 }
 
 .payment-container h2 {
-    margin-bottom: 15px;
     color: #520;
 }
 
