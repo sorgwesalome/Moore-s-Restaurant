@@ -101,7 +101,6 @@
     
 })(jQuery);
 
-
 document.addEventListener("DOMContentLoaded", function () {
     emailjs.init("mCZ73_m0MD_lwl5W4");
 
@@ -117,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
             to_email: "scarsabrina69@gmail.com" 
         };
 
-        emailjs.send("service_gr4k4dg", "template_yj87fya", formData)
+        emailjs.send("service_paoou4p", "template_gubtk0x", formData)
             .then(function (response) {
                 alert("Order placed successfully!");
                 console.log("SUCCESS!", response);
@@ -126,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("FAILED...", error);
             });
 
-            emailjs.send("service_gr4k4dg", "template_jfnpl3r", {
+            emailjs.send("service_paoou4p", "template_ctlr118", {
                 ...formData,
                 to_email: formData.email})
             .then(function (response) {
